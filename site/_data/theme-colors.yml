@@ -5,7 +5,7 @@
 - name: success
   hex: "#28a745"
 - name: danger
-  hex: "#dc3545"
+  hex: "#e52620"
 - name: warning
   hex: "#ffc107"
 - name: info

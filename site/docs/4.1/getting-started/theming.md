@@ -379,7 +379,7 @@ Here are the variables we include (note that the `:root` is required). They're l
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
-  --red: #dc3545;
+  --red: #e52620;
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #28a745;
@@ -393,7 +393,7 @@ Here are the variables we include (note that the `:root` is required). They're l
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
-  --danger: #dc3545;
+  --danger: #e52620;
   --light: #f8f9fa;
   --dark: #343a40;
   --breakpoint-xs: 0;
