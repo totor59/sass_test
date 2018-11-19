@@ -46,6 +46,16 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {% endcapture %}
 {% include example.html content=example %}
 
+## Buttons with icons
+
+Je me souviens en fait, je sais que, grâce à ma propre vérité on vit dans une réalité qu'on a créée et que j'appelle illusion puisque the final conclusion of the spirit is perfection.
+
+{% capture example %}
+<button type="button" class="btn btn-primary"><i class="fas fa-check"></i>Button</button>
+<button type="button" class="btn btn-outline-secondary"><i class="fas fa-times"></i>Button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
 ## Sizes
 
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.

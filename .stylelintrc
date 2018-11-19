@@ -18,6 +18,7 @@
     "declaration-empty-line-before": null,
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
+    font-family-no-missing-generic-family-keyword: null,
     "font-weight-notation": "numeric",
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
@@ -245,7 +246,7 @@
       "fill",
       "stroke"
     ],
-    "property-no-vendor-prefix": true,
+    "property-no-vendor-prefix": null,
     "rule-empty-line-before": null,
     "scss/dollar-variable-default": null,
     "selector-attribute-quotes": "always",
