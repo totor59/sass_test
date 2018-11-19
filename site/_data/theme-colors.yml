@@ -8,5 +8,7 @@
   hex: "#ffc107"
 - name: info
   hex: "#17a2b8"
-- name: dark
+- name: light
+  hex: "#f8f9fa" 
+  name: dark
   hex: "#343a40"

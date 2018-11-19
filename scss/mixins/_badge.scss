@@ -1,10 +1,15 @@
 @mixin badge-variant($bg) {
-  color: color-yiq($bg);
+  @if ($bg == "light") {
+    color: $yiq-text-dark;
+  } @else {
+    color: $yiq-text-light;
+  }
+
   background-color: $bg;
 
   &[href] {
     @include hover-focus {
-      color: color-yiq($bg);
+      color: $yiq-text-light;
       text-decoration: none;
       background-color: darken($bg, 10%);
     }

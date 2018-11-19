@@ -119,4 +119,4 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
-$theme-colors: map-remove($theme-colors, "danger", "light");
+$theme-colors: map-remove($theme-colors, "danger");

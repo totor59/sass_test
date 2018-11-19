@@ -32,7 +32,7 @@ Badges can be used as part of links or buttons to provide a counter.
 
 {% capture example %}
 <button type="button" class="btn btn-primary">
-  Notifications <span class="badge badge-light">4</span>
+  Notifications <span class="badge badge-dark">4</span>
 </button>
 {% endcapture %}
 {% include example.html content=example %}
@@ -43,7 +43,7 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 
 {% capture example %}
 <button type="button" class="btn btn-primary">
-  Profile <span class="badge badge-light">9</span>
+  Profile <span class="badge badge-warning">9</span>
   <span class="sr-only">unread messages</span>
 </button>
 {% endcapture %}

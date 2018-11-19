@@ -684,10 +684,10 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 
 // Badges
 
-$badge-font-size:                   75% !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-padding-y:                   .25em !default;
-$badge-padding-x:                   .4em !default;
+$badge-font-size:                   1rem;
+$badge-font-weight:                 $font-weight-normal;
+$badge-padding-y:                   .4em;
+$badge-padding-x:                   .75em;
 $badge-border-radius:               $border-radius !default;
 
 $badge-pill-padding-x:              .6em !default;
@@ -739,9 +739,9 @@ $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;
 
-$alert-bg-level:                    -10 !default;
-$alert-border-level:                -9 !default;
-$alert-color-level:                 6 !default;
+$alert-bg-level:                    0;
+$alert-border-level:                0;
+$alert-color-level:                 0;
 
 
 // Progress bars
