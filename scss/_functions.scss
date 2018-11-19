@@ -56,11 +56,14 @@
 
   $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
-  @if ($yiq >= $yiq-contrasted-threshold) {
-    @return $yiq-text-dark;
-  } @else {
-    @return $yiq-text-light;
-  }
+  // J'ai commenté ce truc pour que le texte apparaisse blanc méme sur un fond clair
+  // @if ($yiq >= $yiq-contrasted-threshold) {
+  //   @return $yiq-text-dark;
+  // } @else {
+  //   @return $yiq-text-light;
+  // }
+
+  @return $yiq-text-light;
 }
 
 // Retrieve color Sass maps

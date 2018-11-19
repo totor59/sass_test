@@ -53,7 +53,7 @@
   &[readonly] {
     background-color: $input-disabled-bg;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-    opacity: 1;
+    opacity: .3;
   }
 }
 
@@ -83,6 +83,15 @@ select.form-control {
 
 // For use with horizontal and inline forms, when you need the label (or legend)
 // text to align with the form controls.
+form {
+  label,
+  legend {
+    font-size: .875;
+    font-variant: small-caps;
+    text-transform: lowercase;
+  }
+}
+
 .col-form-label {
   padding-top: calc(#{$input-padding-y} + #{$input-border-width});
   padding-bottom: calc(#{$input-padding-y} + #{$input-border-width});

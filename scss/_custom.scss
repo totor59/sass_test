@@ -1,118 +1,6 @@
 //
-// Fonts import
+// Fonts and theme-colors are now located inside scss/{company_name}.scss
 //
-
-@font-face {
-  font-family: oswald;
-  src: url("../fonts/Oswald/Oswald-Regular.ttf");
-}
-@font-face {
-  font-family: roboto;
-  font-weight: 400;
-  src: url("../fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: roboto;
-  font-weight: 700;
-  src: url("../fonts/Roboto/Roboto-Bold.ttf");
-}
-
-// Variables
-//
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
-
-//
-// Color system
-//
-
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #929292;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
-
-$grays: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
-);
-
-
-$blue:    #0091ea;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #e52620;
-$orange:  #feb30b;
-$yellow:  #ffc107 !default;
-$green:   #57bf02;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
-
-$colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$colors: map-merge(
-  (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800
-  ),
-  $colors
-);
-
-$primary:       $red;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $blue;
-$warning:       $orange;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
-
-$theme-colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
-);
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
@@ -123,6 +11,9 @@ $yiq-contrasted-threshold:  150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $gray-900 !default;
 $yiq-text-light:            $white !default;
+
+// Transparent gray for disabled elements background
+$gray-transparent:          rgba(146, 146, 146, .3);
 
 // Options
 //
@@ -244,9 +135,9 @@ $line-height-sm:              1.5 !default;
 $border-width:                1px !default;
 $border-color:                $gray-300 !default;
 
-$border-radius:               .25rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
+$border-radius:               .125rem;
+$border-radius-lg:            .125rem;
+$border-radius-sm:            .125rem;
 
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
@@ -272,7 +163,7 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              .75rem; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 
@@ -389,8 +280,8 @@ $input-btn-border-width:      $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-y:               .375rem;
+$btn-padding-x:               1.25rem;
 $btn-line-height:             $input-btn-line-height !default;
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
@@ -407,7 +298,7 @@ $btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity:        .65 !default;
+$btn-disabled-opacity:        .3;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 
 $btn-link-disabled-color:     $gray-600 !default;
@@ -439,7 +330,7 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
 $input-bg:                              $white !default;
-$input-disabled-bg:                     $gray-200 !default;
+$input-disabled-bg:                     $gray-transparent;
 
 $input-color:                           $gray-700 !default;
 $input-border-color:                    $gray-400 !default;
@@ -456,7 +347,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color:               $gray-900;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
@@ -497,7 +388,7 @@ $custom-control-indicator-bg:           $gray-300 !default;
 $custom-control-indicator-bg-size:      50% 50% !default;
 $custom-control-indicator-box-shadow:   inset 0 .25rem .25rem rgba($black, .1) !default;
 
-$custom-control-indicator-disabled-bg:          $gray-200 !default;
+$custom-control-indicator-disabled-bg:          $gray-600;
 $custom-control-label-disabled-color:           $gray-600 !default;
 
 $custom-control-indicator-checked-color:        $component-active-color !default;
@@ -528,9 +419,9 @@ $custom-select-height:              $input-height !default;
 $custom-select-indicator-padding:   1rem !default; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-line-height:         $input-btn-line-height !default;
 $custom-select-color:               $input-color !default;
-$custom-select-disabled-color:      $gray-600 !default;
+$custom-select-disabled-color:      $input-color;
 $custom-select-bg:                  $input-bg !default;
-$custom-select-disabled-bg:         $gray-200 !default;
+$custom-select-disabled-bg:         $gray-600;
 $custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator-color:     $gray-800 !default;
 $custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
@@ -592,7 +483,7 @@ $custom-file-text: (
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $small-font-size !default;
 $form-feedback-valid-color:         theme-color("success") !default;
-$form-feedback-invalid-color:       theme-color("danger") !default;
+$form-feedback-invalid-color:       theme-color("primary");
 
 
 // Dropdowns
