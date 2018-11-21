@@ -6,10 +6,17 @@
  */
 
 @import "functions";
-@import "adwanted"; // Change this line to compile another theme
-@import "custom";
-@import "variables";
+@import "custom/adwanted"; // Change this line to compile another theme
+@import "custom/_custom"; // Custom variables
 @import "mixins";
+// Mixins are not overridable by !default flag so you have to import your customs mixins after bootstrap/mixins
+@import "custom/mixins/_alert";
+@import "custom/mixins/_badge";
+@import "custom/_badge";
+@import "custom/_buttons";
+@import "custom/_forms";
+@import "custom/_functions";
+@import "variables";
 @import "root";
 @import "reboot";
 @import "type";

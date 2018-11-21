@@ -4,13 +4,13 @@
 // and disabled options for all buttons
 
 @mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
-  color: $yiq-text-light;
+  color: color-yiq($background);
   @include gradient-bg($background);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 
   @include hover {
-    color: $yiq-text-light;
+    color: color-yiq($hover-background);
     @include gradient-bg($hover-background);
     border-color: $hover-border;
   }
@@ -28,9 +28,9 @@
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    color: $gray-900;
-    background-color: $gray-transparent;
-    border-color: $gray-transparent;
+    color: color-yiq($background);
+    background-color: $background;
+    border-color: $border;
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -61,7 +61,7 @@
   border-color: $color;
 
   &:hover {
-    color: $yiq-text-light;
+    color: $color-hover;
     background-color: $active-background;
     border-color: $active-border;
   }
