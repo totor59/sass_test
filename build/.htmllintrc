@@ -33,7 +33,7 @@
   "line-end-style": "lf",
   "spec-char-escape": false,
   "table-req-header": false,
-  "tag-bans": ["b", "i"],
+  "tag-bans": ["b"],
   "tag-close": true,
   "tag-name-lowercase": true,
   "tag-name-match": true,

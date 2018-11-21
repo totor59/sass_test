@@ -6,16 +6,14 @@
  */
 
 @import "functions";
+@import "custom/_functions";
 @import "custom/adwanted"; // Change this line to compile another theme
 @import "custom/_custom"; // Custom variables
 @import "mixins";
 // Mixins are not overridable by !default flag so you have to import your customs mixins after bootstrap/mixins
 @import "custom/mixins/_alert";
 @import "custom/mixins/_badge";
-@import "custom/_badge";
-@import "custom/_buttons";
-@import "custom/_forms";
-@import "custom/_functions";
+@import "custom/mixins/_buttons";
 @import "variables";
 @import "root";
 @import "reboot";
@@ -25,7 +23,9 @@
 @import "grid";
 @import "tables";
 @import "forms";
+@import "custom/_forms";
 @import "buttons";
+@import "custom/_buttons";
 @import "transitions";
 @import "dropdown";
 @import "button-group";
@@ -37,6 +37,7 @@
 @import "breadcrumb";
 @import "pagination";
 @import "badge";
+@import "custom/_badge";
 @import "jumbotron";
 @import "alert";
 @import "progress";
