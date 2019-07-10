@@ -10,10 +10,16 @@
 @import "custom/adwanted"; // Change this line to compile another theme
 @import "custom/_custom"; // Custom variables
 @import "mixins";
+// Font-Awesome
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
+@import "fontawesome/regular.scss";
+@import "fontawesome/brands.scss";
 // Mixins are not overridable by !default flag so you have to import your customs mixins after bootstrap/mixins
 @import "custom/mixins/_alert";
 @import "custom/mixins/_badge";
 @import "custom/mixins/_buttons";
+@import "custom/mixins/_card";
 @import "variables";
 @import "root";
 @import "reboot";
@@ -50,7 +56,4 @@
 @import "carousel";
 @import "utilities";
 @import "print";
-@import "fontawesome/fontawesome.scss";
-@import "fontawesome/solid.scss";
-@import "fontawesome/regular.scss";
-@import "fontawesome/brands.scss";
+

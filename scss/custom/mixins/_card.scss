@@ -1,0 +1,45 @@
+//
+// Accordion
+//
+
+.accordion {
+
+  .card {
+    .card-header {
+      background-color: $gray-900;
+
+      > h5 {
+
+        > button {
+
+          display: block;
+          width: 100%;
+          font-family: $headings-font-family;
+          font-size: 1rem;
+          color: $white;
+          text-align: left;
+          text-decoration: none;
+          text-transform: uppercase;
+          &::before {
+            @extend %fa-icon;
+            @extend .fas;
+            float: right;
+            vertical-align: 0;
+            content: fa-content($fa-var-chevron-down);
+            transition: all .5s;
+          }
+        }
+
+        > button:not(.collapsed) {
+
+          &::before {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+          }
+        }
+
+      }
+    }
+  }
+}
